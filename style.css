@@ -351,6 +351,7 @@ body {
     font-weight: 600;
     color: rgb(29, 29, 31);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 #cal-heatmap {
