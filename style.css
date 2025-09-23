@@ -1,0 +1,554 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: rgb(242, 242, 247);
+    min-height: 100vh;
+    color: rgb(29, 29, 31);
+    line-height: normal;
+}
+
+/* 字体类 */
+.lora {
+    font-family: "Lora", serif;
+}
+
+.noto-sans {
+    font-family: "Noto Sans SC", sans-serif;
+}
+
+.noto-serif {
+    font-family: "Noto Serif SC", serif;
+}
+
+/* 主容器 */
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 4/2;
+    grid-template-areas:
+        "namecard techstack ultralime starsign"
+        "namecard geekdeath heatmap heatmap";
+}
+
+/* 网格区域定义 */
+.long-grid {
+    grid-area: namecard;
+}
+
+#techstack-grid {
+    grid-area: techstack;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+#ultralime-grid {
+    grid-area: ultralime;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+#starsign-grid {
+    grid-area: starsign;
+    aspect-ratio: 1/1;
+    height: 100%;
+    min-height: 0;
+}
+
+#nav-grid {
+    grid-area: geekdeath;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+#heatmap-grid {
+    grid-area: heatmap;
+    height: 100%;
+    min-height: 0;
+}
+
+/* 卡片基础样式 */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 个人信息卡片 */
+#name-card {
+    position: relative;
+    background: linear-gradient(135deg, #b8e6d2 0%, #a8dcc6 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: #2d5a3d;
+}
+
+#noise-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-size: 200px 200px;
+    background-repeat: repeat;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 4px solid rgba(45, 90, 61, 0.2);
+}
+
+.profile-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d5a3d;
+    margin: 0 0 8px 0;
+    line-height: normal;
+}
+
+.profile-info h3 {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(45, 90, 61, 0.7);
+    margin: 0 0 20px 0;
+    line-height: normal;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+#contact-info a {
+    color: rgba(45, 90, 61, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#contact-info a:hover {
+    color: #2d5a3d;
+}
+
+/* 技术栈卡片 */
+#techstack-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 0;
+}
+
+#techstack-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(29, 29, 31);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.techstack-badges-wrapper {
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.techstack-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    animation: none;
+}
+
+.techstack-badges:nth-child(2) {
+    margin-top: 8px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.badge-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.badge span {
+    font-size: 12px;
+    color: rgb(29, 29, 31);
+}
+
+/* 星座卡片 */
+#starsign-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 0;
+}
+
+#starsign-image {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#starsign-image img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+#starsign-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(29, 29, 31);
+    line-height: 1.4;
+}
+
+/* Ultralime 卡片 */
+#ultralime-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+#ultralime-image img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#ultralime-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(29, 29, 31);
+    margin-bottom: 4px;
+}
+
+#ultralime-card p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* 导航卡片 */
+.navigation-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.navigation-card-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(29, 29, 31);
+    margin-bottom: 4px;
+}
+
+.navigation-card-text p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.navigation-card-image img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* 热力图卡片 */
+#heatmap-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
+#heatmap-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(29, 29, 31);
+    margin-bottom: 16px;
+}
+
+#cal-heatmap {
+    width: 100%;
+    flex: 1;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    min-height: 80px;
+}
+
+/* 页脚 */
+footer {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(29, 29, 31);
+}
+
+#beian {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+#beian img {
+    width: 16px;
+    height: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    #container {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    #bento {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        aspect-ratio: unset;
+        grid-template-areas:
+            "namecard"
+            "techstack"
+            "ultralime"
+            "starsign"
+            "geekdeath"
+            "heatmap";
+    }
+
+    .wide-grid {
+        aspect-ratio: unset;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    #profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .profile-name h2 {
+        font-size: 20px;
+    }
+
+    .profile-name h3 {
+        font-size: 12px;
+    }
+
+    #contact-info {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #techstack-card h4 {
+        font-size: 24px;
+    }
+
+    .badge {
+        padding: 6px 10px;
+    }
+
+    .badge-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .badge span {
+        font-size: 12px;
+    }
+
+    .navigation-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .navigation-card-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .profile-image img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .profile-name h2 {
+        font-size: 18px;
+    }
+
+    .profile-name h3 {
+        font-size: 11px;
+    }
+
+    #contact-info a {
+        font-size: 11px;
+    }
+
+    #techstack-card h4 {
+        font-size: 20px;
+    }
+
+    #starsign-image img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #starsign-card h4 {
+        font-size: 14px;
+    }
+
+    #ultralime-image img {
+        width: 36px;
+        height: 36px;
+    }
+
+    #ultralime-card h4 {
+        font-size: 14px;
+    }
+
+    #ultralime-card p {
+        font-size: 11px;
+    }
+
+    .navigation-card-text h4 {
+        font-size: 14px;
+    }
+
+    .navigation-card-text p {
+        font-size: 11px;
+    }
+
+    .navigation-card-image img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #heatmap-card h4 {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}

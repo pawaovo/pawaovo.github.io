@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawa / 帆迹</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root">
+        <div id="container">
+            <div id="bento">
+                <!-- 个人信息卡片 -->
+                <div class="long-grid" id="namecard-grid">
+                    <div class="card" id="name-card">
+                        <div id="noise-image"></div>
+                        <div id="profile">
+                            <div class="profile-image">
+                                <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Eltrac">
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="lora">Eltrac</h2>
+                            <h3 class="noto-serif">alias. 帆迹、以歌</h3>
+                        </div>
+                        <div id="contact-info" class="lora">
+                            <a href="https://github.com/pawa">GitHub</a>
+                            <a href="mailto:hi@guhub.cn">hi@guhub.cn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 技术栈区域 -->
+                <div id="techstack-grid" style="width: 100%;">
+                    <div class="card techstack-card noto-sans" id="techstack-card">
+                        <h4>🔧 技术栈</h4>
+                        <div class="techstack-badges-wrapper">
+                            <div class="techstack-badges" id="tech-badge-container">
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+                                    <span>Sass</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue">
+                                    <span>Vue</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                                    <span>React</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" alt="Svelte">
+                                    <span>Svelte</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+                                    <span>Next.js</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                                    <span>Java</span>
+                                </div>
+                            </div>
+                            <div class="techstack-badges" id="app-badge-container">
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion">
+                                    <span>Notion</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Typora_logo.svg/1024px-Typora_logo.svg.png" alt="Typora">
+                                    <span>Typora</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://obsidian.md/images/obsidian-logo-gradient.svg" alt="Obsidian">
+                                    <span>Obsidian</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://logseq.com/logo.png" alt="Logseq">
+                                    <span>Logseq</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion">
+                                    <span>Notion</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Typora_logo.svg/1024px-Typora_logo.svg.png" alt="Typora">
+                                    <span>Typora</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://obsidian.md/images/obsidian-logo-gradient.svg" alt="Obsidian">
+                                    <span>Obsidian</span>
+                                </div>
+                                <div class="badge">
+                                    <img class="badge-icon" src="https://logseq.com/logo.png" alt="Logseq">
+                                    <span>Logseq</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultralime 项目卡片 -->
+                <div id="ultralime-grid">
+                    <a class="card noto-sans" id="ultralime-card" href="https://blog.pawa.dev" target="_blank">
+                        <div id="ultralime-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234ade80' rx='8'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' fill='white'%3E🌿%3C/text%3E%3C/svg%3E" alt="Ultralime">
+                        </div>
+                        <div id="ultralime-card-content">
+                            <h4>Ultralime</h4>
+                            <p>我的成功与作博客</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 星座信息卡片 -->
+                <div id="starsign-grid">
+                    <div class="card noto-sans" id="starsign-card">
+                        <div id="starsign-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext x='16' y='20' text-anchor='middle' font-size='16' fill='%23666'%3E♊%3C/text%3E%3C/svg%3E" alt="双子座">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext x='16' y='20' text-anchor='middle' font-size='16' fill='%23666'%3E♍%3C/text%3E%3C/svg%3E" alt="处女座">
+                        </div>
+                        <h4>太阳双子 月升处女</h4>
+                    </div>
+                </div>
+
+                <!-- 开源项目卡片 -->
+                <div id="nav-grid">
+                    <a class="card navigation-card" id="geekdeathproject-card" href="https://github.com/pawa" target="_blank">
+                        <div class="navigation-card-text noto-serif">
+                            <h4>极客死亡计划</h4>
+                            <p>文字在此下载。</p>
+                        </div>
+                        <div class="navigation-card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%236366f1' rx='8'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' fill='white'%3E💀%3C/text%3E%3C/svg%3E" alt="极客死亡计划">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 文章字数热力图 -->
+                <div id="heatmap-grid">
+                    <div class="card noto-sans" id="heatmap-card">
+                        <h4>文章字数热力图</h4>
+                        <div id="cal-heatmap">
+                            <!-- 热力图将通过JavaScript生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 页脚 -->
+            <footer class="noto-serif">
+                <p>Pawa的个人分享 © 2024, All rights reserved.</p>
+                <p id="beian">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' text-anchor='middle' font-size='12' fill='%23666'%3E🏠%3C/text%3E%3C/svg%3E" alt="备案">
+                    <a href="https://pawa.dev" target="_blank">个人网站</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
