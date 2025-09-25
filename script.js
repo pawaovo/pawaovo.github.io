@@ -1,5 +1,3 @@
-// 技术栈现在使用静态网格布局，不需要滚动动画
-
 // GitHub贡献热力图配置
 const GITHUB_CONFIG = {
     username: 'pawaovo',
@@ -330,8 +328,7 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     const month = MONTH_NAMES[date.getMonth()];
     const day = date.getDate();
-    const year = date.getFullYear();
-    return `${month} ${day}, ${year}`;
+    return `${month} ${day}`;
 }
 
 // 生成静态热力图（作为后备方案）
@@ -407,44 +404,20 @@ async function generateHeatmap() {
 
 // 添加交互效果
 function initInteractiveEffects() {
-    // 卡片悬停效果
-    const cards = document.querySelectorAll('.card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-4px)';
-            this.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.2)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-        });
-    });
-
-    // 头像点击效果
-    const avatar = document.querySelector('.profile-image img');
-    if (avatar) {
-        avatar.addEventListener('click', function() {
-            this.style.transform = 'scale(1.1) rotate(360deg)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1) rotate(0deg)';
-            }, 600);
-        });
-    }
+    // 这里可以添加其他交互效果
 }
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', function() {
     generateHeatmap();
     initInteractiveEffects();
-    
+
     // 添加页面加载动画
     const cards = document.querySelectorAll('.card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             card.style.transition = 'all 0.6s ease';
             card.style.opacity = '1';
@@ -452,5 +425,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
 });
-
-
